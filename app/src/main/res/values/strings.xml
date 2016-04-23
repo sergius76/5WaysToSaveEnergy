@@ -1,0 +1,17 @@
+<resources>
+    <!--Strings main Activity-->
+    <string name="app_name">MyProject5Ways</string>
+    <string name="iluminacion">Aprovecha la luz natural al máximo, durante el día evita encender focos en habitaciones iluminadas por el sol. Cambia todos los focos por unos de bajo consumo, pues consumen cuatro veces menos energía y duran hasta diez veces más, y aún así apágalos cuando no estés en la habitación.</string>
+    <string name="computadora">Al trabajar con tu computadora de escritorio o Portátil, desconéctala por completo cuando termines de utilizarla. Si vas a hacer una pausa, cierra el portátil o apaga el monitor. Mira de tener configúrado el modo de ahorro de enrgía automático de todas formas.</string>
+    <string name="electrodomestico">Desconecta todo lo que no utilices. La televisión, radio, la batería del movil al terminar de cargarlo, licuadoras, microondas, etc. Al final de utilizarlos, el evitar dejar estos aparatos en modo de espera, significará eliminar el “consumo fantasma” en casa, que representa un 5% del consumo medio.</string>
+    <string name="Refrigerador">Es importante colocarlo en un lugar con al menos 5 cms de separación para permitir la circulación del aire, instalarlo lejos de los rayos solares, la estufa, el calentador de agua y otras fuentes de calor. También debemos observar que la puerta cierre herméticamente y que no deje escapar el aire frío.</string>
+    <string name="Lavadora">Intentar llenarla con la cantidad de ropa indicada como máximo. Pues si ponemos menos gastaremos agua y electricidad de más. Y si pone más de lo permitido, la ropa quedará mal lavada y se corre el riesgo de forzar el motor. También es importante utilizar agua fría para lavar.</string>
+
+    <!--Strings Calculator Energy-->
+    <string name="app_name_calculadora">Calculadora de Consumo</string>
+    <string name="infocalcu">Le ofrecemos una sencilla forma de cácular su consumo diario de energía!!</string>
+    <string name="intConsumo">Introduzca el número Kws consumidos: </string>
+    <string name="intValor">Introduzca el precio Kwh: </string>
+    <string name="tipoFactura">¿Indique si su factura es Trimestral o Bimestral?</string>
+
+</resources>
