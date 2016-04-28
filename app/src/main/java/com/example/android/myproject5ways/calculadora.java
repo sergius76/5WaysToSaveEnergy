@@ -16,63 +16,77 @@ import java.text.DecimalFormat;
  * Created by SERGIUS on 21/04/2016.
  */
 public class calculadora extends AppCompatActivity {
-    @Override public void onCreate(Bundle savedInstanceState) {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculadora);
     }
-    public void MostrarCalculo(View view){
 
+    /**
+     * This method is called when the Calculo button is clicked.
+     */
+
+    public void MostrarCalculo(View view) {
+
+        //variables to get the value of consum and Price.
         double valueConsumKw, valuePriceKwh;
 
-        EditText consumo = (EditText)findViewById(R.id.consumoValor);
-        EditText precio = (EditText)findViewById(R.id.precioKwHora);
+        EditText consumo = (EditText) findViewById(R.id.valueConsumo);
+        EditText precio = (EditText) findViewById(R.id.priceKwHora);
+
+        /**
+         * /check if the values of consum and price are empty
+         * if not empty continue to do calcul and show the result
+         */
 
         if (!consumo.getText().toString().isEmpty()
                 && !precio.getText().toString().isEmpty()) {
+            //Convert values String to double the values wrote by the customer
             String valueConsum = consumo.getText().toString();
             valueConsumKw = Double.parseDouble(valueConsum);
 
             String valuePrecioKw = precio.getText().toString();
             valuePriceKwh = Double.parseDouble(valuePrecioKw);
 
-            RadioButton tipoFactura = (RadioButton)findViewById(R.id.radioBimestral);
+            //Incated the state of radio button Bimestral
+            RadioButton tipoFactura = (RadioButton) findViewById(R.id.radioBimestral);
             boolean biActivado = tipoFactura.isChecked();
 
-            //  RadioButton tipoFactura2 = (RadioButton)findViewById(R.id.radioTriMestral);
-            //  boolean triActivado = tipoFactura2.isChecked();
-
-
-            /**  if((consumValue=0.000) && (consumPrecio = 0.000)){
-
-             }*/
-            double resumen = Calculo(valueConsumKw, valuePriceKwh, biActivado);
+            /**
+             * /call the method displayCalculo
+             *
+             */
+            double resumen = displayCalculo(valueConsumKw, valuePriceKwh, biActivado);
             DecimalFormat df = new DecimalFormat("0.00");
-            //  String total = Double.toString(resumen);
-
-            TextView totales = (TextView)findViewById(R.id.totalConsumo);
-            totales.setText(df.format(resumen)+"€");
-            //  DisplayTotal(total);
+            /**
+             * Display result price on the screen
+             */
+            TextView totales = (TextView) findViewById(R.id.resultPrice);
+            totales.setText(df.format(resumen) + "€");
 
         } else {
+            //Show a message to inform the user if the values of price or consum are empty
             Toast.makeText(this, "Faltan datos", Toast.LENGTH_SHORT).show();
         }
 
     }
-
-    private double Calculo(double consumido, double precio, boolean biSelected){
+    /**
+     * Calculates the price.
+     *
+     * @return total is the final price of consum by day.
+     */
+    private double displayCalculo(double consumido, double precio, boolean biSelected) {
         double consum = consumido;
         double preciokw = precio;
         double total;
 
-        if(biSelected){
+        if (biSelected) {
             total = (consumido * precio) / 60;
-        }else{
+        } else {
             total = (consumido * precio) / 90;
         }
 
         return total;
 
     }
-
-
 }

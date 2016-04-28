@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
-    android:padding="16dp"
-    tools:context="com.example.sergiorr.fivewaystosaveenergy.MainActivity">
+    tools:context="com.example.sergiorr.fivewaystosaveenergy.MainActivity"
+    android:background="#CDDC39">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -14,192 +13,171 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="5 FORMAS DE AHORRAR ENERGÍA"
-            style="@style/headertext"
-            android:textSize="22sp"
+            android:text="@string/app_info"
+            android:textSize="18sp"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/textView" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Iluminacion"
-            style="@style/headertext"
-            android:id="@+id/textView_ilu1" />
+            android:id="@+id/textView"
+            style="@style/textDescription"/>
+        <!--Parte Iluminacion-->
         <LinearLayout
             android:id="@+id/iluminacion"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
                 android:id="@+id/iluView"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
                 android:src="@drawable/bombilla"
-                android:layout_gravity="center_vertical"
-
-                android:scaleType="centerInside"
-                android:layout_weight="2" />
+                android:layout_marginLeft="16dp"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/textView_ilu1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                style="@style/simpletext"
-                android:layout_marginLeft="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:textSize="16sp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/iluminacion"
-                android:id="@+id/textView_ilu"
-                android:layout_weight="8" />
+                android:layout_gravity="center_vertical"
+                android:layout_weight="9"
+                android:text="Iluminación"
+                style="@style/headertextOptions"/>
         </LinearLayout>
         <TextView
+            android:id="@+id/textView_ilu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Computadoras"
-            style="@style/headertext"
-            android:id="@+id/textView_2" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/iluminacion"
+            style="@style/textDescription"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/holo_blue_dark" />
+        <!--Parte Computadoras-->
         <LinearLayout
             android:id="@+id/compu"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
                 android:id="@+id/compuView"
-                android:src="@drawable/computadora"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:scaleType="centerInside"
-                android:layout_weight="2" />
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:src="@drawable/computadora2"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/textView_2"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                style="@style/simpletext"
-                android:textSize="15sp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/computadora"
-                android:id="@+id/textView2"
-                android:layout_weight="8" />
+                android:layout_weight="9"
+                android:text="Computadoras"
+                style="@style/headertextOptions"/>
         </LinearLayout>
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Electrodomesticos"
-            style="@style/headertext"
-            android:id="@+id/textView_elec1" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/computadora"
+            style="@style/textDescription"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/holo_blue_dark" />
+        <!--Parte Electrodomesticos-->
         <LinearLayout
             android:id="@+id/electro"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
                 android:id="@+id/Image_View_Elec"
-                android:src="@drawable/tv"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:scaleType="centerInside"
-                android:layout_weight="2" />
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:src="@drawable/tv2"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/textView_elec1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                style="@style/simpletext"
-                android:textSize="15sp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/electrodomestico"
-                android:id="@+id/textView_elec"
-                android:layout_weight="8" />
+                android:layout_weight="9"
+                android:text="Electrodomesticos"
+                style="@style/headertextOptions"/>
         </LinearLayout>
         <TextView
+            android:id="@+id/textView_elec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Electrodomesticos"
-            style="@style/headertext"
-            android:id="@+id/textView_elec2" />
+            style="@style/textDescription"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/electrodomestico"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/holo_blue_dark" />
+        <!--Parte Nevera-->
         <LinearLayout
             android:id="@+id/refrigerador"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
                 android:id="@+id/Image_View_refri"
-                android:src="@drawable/nevera"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:scaleType="centerInside"
-                android:layout_weight="2" />
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:src="@drawable/nevera2"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/textView_elec2"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                style="@style/simpletext"
-                android:layout_margin="16dp"
-                android:textSize="15sp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/Refrigerador"
-                android:id="@+id/textView_nevera"
-                android:layout_weight="8" />
+                android:layout_weight="9"
+                android:text="Neveras"
+                style="@style/headertextOptions"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Electrodomesticos"
-            style="@style/headertext"
-            android:id="@+id/textView_lavadora1" />
+            style="@style/textDescription"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Refrigerador"
+            android:id="@+id/textView_nevera"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/holo_blue_dark" />
+        <!--Parte Lavadoras-->
         <LinearLayout
             android:id="@+id/lavadora"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
                 android:id="@+id/Image_View_lava"
-                android:src="@drawable/lavadora"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:scaleType="centerInside"
-                android:layout_weight="2" />
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:src="@drawable/lavadora2"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/textView_lavadora1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                style="@style/simpletext"
-                android:layout_margin="16dp"
-                android:textSize="15sp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/Lavadora"
-                android:id="@+id/textView_lavadora"
-                android:layout_weight="8" />
+                android:text="Lavadora"
+                android:layout_weight="9"
+                style="@style/headertextOptions" />
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/simpletext"
-                android:layout_margin="16dp"
-                android:textSize="16sp"
-                android:text="Si lo desea puede probar nuestro Calculador de Energía"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#2196F3"
-                android:text="Calculadora"
-                android:padding="8dp"
-                android:textColor="#FFFFFF"
-                android:onClick="LanzarCalculadora"
-                android:id="@+id/calculadora"
-                android:layout_gravity="center_horizontal" />
-
-        </LinearLayout>
-
-
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Lavadora"
+            android:id="@+id/textView_lavadora"
+            style="@style/textDescription"/>
     </LinearLayout>
 </ScrollView>
