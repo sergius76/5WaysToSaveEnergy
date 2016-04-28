@@ -70,6 +70,7 @@ public class calculadora extends AppCompatActivity {
         }
 
     }
+
     /**
      * Calculates the price.
      *

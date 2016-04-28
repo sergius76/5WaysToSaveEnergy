@@ -1,7 +1,7 @@
 <resources>
     <!--Strings main Activity-->
-    <string name="app_name">FiveWaysToSaveEnergy</string>
-    <string name="app_info">Presentamos 5 formas de ahorrar energía.</string>
+    <string name="app_name">Five Ways to save Energy</string>
+    <string name="app_info">Le ofrecemos 5 formas de ahorrar energía.</string>
     <!--Strings Texts Description-->
     <string name="iluminacion">• Aprovecha la luz natural al máximo, durante el día evita encender
         focos en habitaciones iluminadas por el sol.\n• Cambia todos los focos por unos de bajo
@@ -32,13 +32,12 @@
 
     <!--Strings Calculator Energy-->
     <string name="app_name_calculadora">Calculadora de Consumo</string>
-    <string name="infocalcu">Calcule el valor de su consumo diario!!</string>
-    <string name="infocalcutexto">Indiquemos de su factura el número de Kw consumidos y el precio
-    al que se le cobran los Kwh y le informaremos el precio por día que gasta en energía electrica.</string>
-    <string name="textConsumo">Cantidad de Kws consumidos: </string>
-    <string name="textPriceKwh">Precio Kwh: </string>
-    <string name="tipoFactura">¿Por favor, díganos si su factura es Trimestral o Bimestral?</string>
-
+    <string name="infocalcu">Calcule su consumo diario en energía!!</string>
+    <string name="infocalcutexto">Introduzca el número de Kw consumidos y el precio
+    del Kwh que aparece en su Factura.</string>
+    <string name="textConsumo">Cantidad de Kws: </string>
+    <string name="textPriceKwh">Valor del Kwh: </string>
+    <string name="tipoFactura">Por favor, indiquenos si su factura es Trimestral o Bimestral.</string>
     <string name="tab1">Iluminacion</string>
     <string name="tab2">Nevera</string>
     <string name="tab3">Tv</string>

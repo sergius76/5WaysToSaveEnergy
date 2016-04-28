@@ -1,151 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CDDC39">
+    android:background="#CDDC39"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp">
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_margin="16dp"
+            android:id="@+id/textView_Info_Calculadora"
+            style="@style/headerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            style="@style/simpletext"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
             android:text="@string/infocalcu"
-            android:id="@+id/textView_Info_Calculadora" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
         <TextView
+            android:id="@+id/textView_valores_Factura"
+            style="@style/simpleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tipoFactura"
-            style="@style/simpletext"
-            android:id="@+id/textView_Info_Factura" />
+            android:layout_marginTop="8dp"
+            android:text="@string/infocalcutexto" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textConsumo"
+                style="@style/valueText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:text="@string/textConsumo"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/valueConsumo"
+                android:layout_width="70dp"
+
+                android:layout_height="wrap_content"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textPriceKwh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                style="@style/valueText"
+                android:text="@string/textPriceKwh"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/priceKwHora"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_Info_Factura"
+            style="@style/simpleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/tipoFactura" />
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
             android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/radioBimestral"
+                style="@style/simpleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
                 android:checked="true"
-                android:text="BiMestral"
-                style="@style/simpletext"
+                android:textStyle="bold"
                 android:selectAllOnFocus="true"
-                android:id="@+id/radioBimestral"
-                />
+                android:text="BiMestral" />
 
             <RadioButton
+                android:id="@+id/radioTriMestral"
+                style="@style/simpleText"
+                android:paddingLeft="8dp"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trimestral"
-                style="@style/simpletext"
-                android:id="@+id/radioTriMestral"
-                />
+                android:text="Trimestral" />
         </RadioGroup>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/infocalcutexto"
-            android:layout_marginTop="8dp"
-            style="@style/simpletext"
-            android:id="@+id/textView_valores_Factura" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                style="@style/simpletext"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="4dp"
-                android:layout_weight="8"
-                android:text="@string/textConsumo"
-                android:id="@+id/textConsumo" />
-            <EditText
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="4dp"
-                android:hint="0.00"
-                android:inputType="numberDecimal"
-                android:id="@+id/valueConsumo"/>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                style="@style/simpletext"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/textPriceKwh"
-                android:id="@+id/textPriceKwh" />
-            <EditText
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:textAlignment="center"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:hint="0.00"
-                android:id="@+id/priceKwHora" />
-        </LinearLayout>
 
 
         <Button
+            android:id="@+id/button_Calculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calculo de Consumo"
-            android:id="@+id/button_Calculo"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:padding="8dp"
-            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:background="#2196F3"
             android:onClick="MostrarCalculo"
-            android:background="#2196F3"/>
+            android:padding="8dp"
+            android:text="Calculo de Consumo"
+            android:textColor="#FFFFFF" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal">
+
             <TextView
-                android:layout_marginTop="16dp"
-                android:layout_width="wrap_content"
+                android:id="@+id/InfoTotalCalculate_text_view"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="72dp"
-                android:textStyle="bold"
+                android:layout_weight="8"
                 android:text="Consumo Diario:"
-                android:textSize="20dp"
-                android:textAllCaps="true"
-                android:id="@+id/InfoTotalCalculate_text_view" />
+                style="@style/headerText" />
+
             <TextView
-                android:layout_marginTop="16dp"
-                android:layout_width="wrap_content"
+                android:id="@+id/resultPrice"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text=""
-                style="@style/simpletext"
-                android:id="@+id/resultPrice" />
+                android:layout_weight="2"
+                style="@style/simpleText"
+                android:text="" />
 
         </LinearLayout>
 
