@@ -21,73 +21,56 @@ public class calculadora extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculadora);
     }
-
     /**
      * This method is called when the Calculo button is clicked.
      */
-
-    public void MostrarCalculo(View view) {
-
+    public void displayCalculo(View view) {
         //variables to get the value of consum and Price.
         double valueConsumKw, valuePriceKwh;
-
-        EditText consumo = (EditText) findViewById(R.id.valueConsumo);
-        EditText precio = (EditText) findViewById(R.id.priceKwHora);
-
+        EditText addConsumo = (EditText) findViewById(R.id.valueConsumo);
+        EditText addPrice = (EditText) findViewById(R.id.priceKwHora);
         /**
-         * /check if the values of consum and price are empty
-         * if not empty continue to do calcul and show the result
+         * /check if the values of addConsumo and addPrice are empty
+         * if not empty continue to do calculate and show the result
          */
-
-        if (!consumo.getText().toString().isEmpty()
-                && !precio.getText().toString().isEmpty()) {
+        if (!addConsumo.getText().toString().isEmpty()
+                && !addPrice.getText().toString().isEmpty()) {
             //Convert values String to double the values wrote by the customer
-            String valueConsum = consumo.getText().toString();
+            String valueConsum = addConsumo.getText().toString();
             valueConsumKw = Double.parseDouble(valueConsum);
-
-            String valuePrecioKw = precio.getText().toString();
+            String valuePrecioKw = addPrice.getText().toString();
             valuePriceKwh = Double.parseDouble(valuePrecioKw);
-
-            //Incated the state of radio button Bimestral
-            RadioButton tipoFactura = (RadioButton) findViewById(R.id.radioBimestral);
-            boolean biActivado = tipoFactura.isChecked();
-
+            //Check the state of radio button Bimestral
+            RadioButton typeFactura = (RadioButton) findViewById(R.id.radioBimestral);
+            boolean biActivated = typeFactura.isChecked();
             /**
-             * /call the method displayCalculo
+             * /call the method getPriceTotal
              *
              */
-            double resumen = displayCalculo(valueConsumKw, valuePriceKwh, biActivado);
-            DecimalFormat df = new DecimalFormat("0.00");
+            String priteTotal = getPriceTotal(valueConsumKw, valuePriceKwh, biActivated);
             /**
              * Display result price on the screen
              */
             TextView totales = (TextView) findViewById(R.id.resultPrice);
-            totales.setText(df.format(resumen) + "€");
-
+            totales.setText(priteTotal);
         } else {
             //Show a message to inform the user if the values of price or consum are empty
             Toast.makeText(this, "Faltan datos", Toast.LENGTH_SHORT).show();
         }
-
     }
-
     /**
      * Calculates the price.
-     *
      * @return total is the final price of consum by day.
      */
-    private double displayCalculo(double consumido, double precio, boolean biSelected) {
-        double consum = consumido;
-        double preciokw = precio;
+    private String getPriceTotal(double valueKw, double valueKwh, boolean biSelected) {
         double total;
-
         if (biSelected) {
-            total = (consumido * precio) / 60;
+            total = (valueKw * valueKwh) / 60;
         } else {
-            total = (consumido * precio) / 90;
+            total = (valueKw * valueKwh) / 90;
         }
-
-        return total;
+        DecimalFormat df = new DecimalFormat("0.00");
+        return df.format(total);
 
     }
 }

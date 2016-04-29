@@ -10,13 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <TextView
-
             style="@style/titleActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_margin="16dp"
             android:text="@string/app_info"
             android:textSize="18sp" />
@@ -26,7 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <ImageView
                 android:id="@+id/iluView"
                 android:layout_width="0dp"
@@ -34,7 +30,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:src="@drawable/bombilla" />
-
             <TextView
                 android:id="@+id/textView_ilu1"
                 style="@style/headerTextOptions"
@@ -44,7 +39,6 @@
                 android:layout_weight="9"
                 android:text="Iluminación" />
         </LinearLayout>
-
         <TextView
             android:id="@+id/textView_ilu"
             style="@style/textDescription"
@@ -52,7 +46,6 @@
             android:layout_height="wrap_content"
             android:text="@string/iluminacion"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -64,7 +57,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <ImageView
                 android:id="@+id/compuView"
                 android:layout_width="0dp"
@@ -72,7 +64,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:src="@drawable/computadora2" />
-
             <TextView
                 android:id="@+id/textView_2"
                 style="@style/headerTextOptions"
@@ -81,7 +72,6 @@
                 android:layout_weight="9"
                 android:text="Computadoras" />
         </LinearLayout>
-
         <TextView
             android:id="@+id/textView2"
             style="@style/textDescription"
@@ -89,7 +79,6 @@
             android:layout_height="wrap_content"
             android:text="@string/computadora"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -101,7 +90,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <ImageView
                 android:id="@+id/Image_View_Elec"
                 android:layout_width="0dp"
@@ -109,7 +97,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:src="@drawable/tv2" />
-
             <TextView
                 android:id="@+id/textView_elec1"
                 style="@style/headerTextOptions"
@@ -118,7 +105,6 @@
                 android:layout_weight="9"
                 android:text="Electrodomésticos" />
         </LinearLayout>
-
         <TextView
             android:id="@+id/textView_elec"
             style="@style/textDescription"
@@ -126,7 +112,6 @@
             android:layout_height="wrap_content"
             android:text="@string/electrodomestico"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -138,7 +123,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <ImageView
                 android:id="@+id/Image_View_refri"
                 android:layout_width="0dp"
@@ -146,7 +130,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:src="@drawable/nevera2" />
-
             <TextView
                 android:id="@+id/textView_elec2"
                 style="@style/headerTextOptions"
@@ -155,7 +138,6 @@
                 android:layout_weight="9"
                 android:text="Neveras" />
         </LinearLayout>
-
         <TextView
             android:id="@+id/textView_nevera"
             style="@style/textDescription"
@@ -163,7 +145,6 @@
             android:layout_height="wrap_content"
             android:text="@string/Refrigerador"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -175,7 +156,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <ImageView
                 android:id="@+id/Image_View_lava"
                 android:layout_width="0dp"
@@ -183,7 +163,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:src="@drawable/lavadora2" />
-
             <TextView
                 android:id="@+id/textView_lavadora1"
                 style="@style/headerTextOptions"
@@ -192,7 +171,6 @@
                 android:layout_weight="9"
                 android:text="Lavadoras" />
         </LinearLayout>
-
         <TextView
             android:id="@+id/textView_lavadora"
             style="@style/textDescription"

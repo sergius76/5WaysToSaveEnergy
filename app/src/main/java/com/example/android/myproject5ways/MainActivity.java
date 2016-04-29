@@ -15,14 +15,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     /**
-     * this method is called when Calculadora button is clicked
-     * start calculadora activity
-
-    public void LanzarCalculadora(View View){
-        Intent intent = new Intent(this,calculadora.class);
-        startActivity(intent);
-    } */
-    /**
      * this method add options to ActionBar
      * start calculadora activity
      */
