@@ -25,7 +25,7 @@ public class calculadora extends AppCompatActivity {
      * This method is called when the Calculo button is clicked.
      */
     public void displayCalculo(View view) {
-        //variables to get the value of consum and Price.
+        //variables to get the value of and Price and consun kw.
         double valueConsumKw, valuePriceKwh;
         EditText addConsumo = (EditText) findViewById(R.id.valueConsumo);
         EditText addPrice = (EditText) findViewById(R.id.priceKwHora);
@@ -35,9 +35,12 @@ public class calculadora extends AppCompatActivity {
          */
         if (!addConsumo.getText().toString().isEmpty()
                 && !addPrice.getText().toString().isEmpty()) {
-            //Convert values String to double the values wrote by the customer
+            /**Convert values String to double the values wrote by the customer
+             * add value Kw price
+             */
             String valueConsum = addConsumo.getText().toString();
             valueConsumKw = Double.parseDouble(valueConsum);
+            //add value of Kw
             String valuePrecioKw = addPrice.getText().toString();
             valuePriceKwh = Double.parseDouble(valuePrecioKw);
             //Check the state of radio button Bimestral
@@ -47,12 +50,12 @@ public class calculadora extends AppCompatActivity {
              * /call the method getPriceTotal
              *
              */
-            String priteTotal = getPriceTotal(valueConsumKw, valuePriceKwh, biActivated);
+            String priceTotal = getPriceTotal(valueConsumKw, valuePriceKwh, biActivated);
             /**
              * Display result price on the screen
              */
             TextView totales = (TextView) findViewById(R.id.resultPrice);
-            totales.setText(priteTotal);
+            totales.setText(priceTotal);
         } else {
             //Show a message to inform the user if the values of price or consum are empty
             Toast.makeText(this, "Faltan datos", Toast.LENGTH_SHORT).show();
@@ -71,6 +74,5 @@ public class calculadora extends AppCompatActivity {
         }
         DecimalFormat df = new DecimalFormat("0.00");
         return df.format(total);
-
     }
 }
