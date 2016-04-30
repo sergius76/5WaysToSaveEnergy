@@ -55,7 +55,7 @@ public class calculadora extends AppCompatActivity {
              * Display result price on the screen
              */
             TextView totales = (TextView) findViewById(R.id.resultPrice);
-            totales.setText(priceTotal);
+            totales.setText((priceTotal)+"€");
         } else {
             //Show a message to inform the user if the values of price or consum are empty
             Toast.makeText(this, "Faltan datos", Toast.LENGTH_SHORT).show();
